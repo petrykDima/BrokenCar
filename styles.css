@@ -310,6 +310,11 @@ main { flex: 1; padding: 48px 0 40px; }
     font-size: 1.2rem;
     color: var(--racing-green);
 }
+.reco__was {
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-decoration: line-through;
+}
 
 /* ---------- Document (PDF) card ---------- */
 .doc {
