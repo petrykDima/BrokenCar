@@ -409,6 +409,44 @@ main { flex: 1; padding: 48px 0 40px; }
     color: var(--racing-red);
 }
 
+/* ---------- Photo gallery ---------- */
+.gallery-block { margin-top: 24px; }
+.gallery-label {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ochre-deep);
+    margin-bottom: 12px;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+.gallery__item {
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--cream-deep);
+    cursor: zoom-in;
+    aspect-ratio: 4 / 3;
+    background: var(--cream);
+}
+.gallery__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.gallery__item:hover img { transform: scale(1.04); }
+
+@media (max-width: 560px) {
+    .gallery { grid-template-columns: 1fr 1fr; }
+}
+
 /* ---------- Lightbox (:target) ---------- */
 .lightbox {
     position: fixed;
