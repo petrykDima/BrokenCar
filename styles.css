@@ -1,0 +1,149 @@
+/* BrokenCar — palette inspired by Porsche retro liveries */
+:root {
+    --cream: #f3ead6;        /* ivory / cream body */
+    --cream-deep: #e7d9bc;
+    --ochre: #d9a441;        /* mustard / ochre yellow */
+    --racing-red: #b5341f;   /* vintage racing red */
+    --gulf-blue: #6a9bb5;    /* gulf blue */
+    --racing-green: #34503a; /* british racing green */
+    --charcoal: #2b2723;     /* warm near-black */
+    --chrome: #c7c2b8;       /* silver / chrome */
+    --ink: #3a332b;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrap {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.site-header {
+    background: var(--racing-green);
+    color: var(--cream);
+    padding: 18px 0;
+    border-bottom: 4px solid var(--ochre);
+}
+.site-header .wrap {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+}
+.brand {
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+.brand-sub {
+    font-size: 0.9rem;
+    color: var(--ochre);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* Main */
+main { flex: 1; padding: 40px 0; }
+
+/* Car card */
+.car-card {
+    background: #fffdf7;
+    border: 1px solid var(--cream-deep);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(43, 39, 35, 0.10);
+}
+.car-card__media {
+    height: 160px;
+    background:
+        repeating-linear-gradient(
+            45deg,
+            var(--gulf-blue) 0 24px,
+            #77a7c0 24px 48px
+        );
+    position: relative;
+}
+.car-card__badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: var(--racing-red);
+    color: var(--cream);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 999px;
+}
+.car-card__body { padding: 26px 24px 30px; }
+
+.car-title {
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: var(--charcoal);
+}
+.car-subtitle {
+    color: var(--racing-red);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin-top: 4px;
+    margin-bottom: 24px;
+}
+
+/* Specs */
+.specs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+.spec {
+    background: var(--cream);
+    border-left: 4px solid var(--ochre);
+    border-radius: 8px;
+    padding: 12px 14px;
+}
+.spec dt {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #8a7f6d;
+    margin-bottom: 4px;
+}
+.spec dd {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--charcoal);
+}
+.mono {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    letter-spacing: 0.02em;
+    font-size: 0.95rem !important;
+}
+
+/* Footer */
+.site-footer {
+    background: var(--charcoal);
+    color: var(--chrome);
+    padding: 16px 0;
+    font-size: 0.82rem;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .specs { grid-template-columns: 1fr; }
+    .car-title { font-size: 1.6rem; }
+}
