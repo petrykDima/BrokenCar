@@ -393,6 +393,22 @@ main { flex: 1; padding: 48px 0 40px; }
     font-weight: 600;
     color: var(--racing-red);
 }
+/* clickable repair -> document */
+.cost-table td a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--muted);
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+.cost-table td a:hover {
+    color: var(--racing-red);
+    border-bottom-color: var(--racing-red);
+}
+.cost-table td a::after {
+    content: " ↗";
+    color: var(--ochre-deep);
+    font-size: 0.85em;
+}
 
 /* ---------- Note / insight callout ---------- */
 .note {
