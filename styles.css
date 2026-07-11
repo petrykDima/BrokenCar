@@ -221,6 +221,13 @@ main { flex: 1; padding: 48px 0 40px; }
 .chapter__body strong { color: var(--racing-green); font-weight: 600; }
 
 /* ---------- Screenshot thumbnail ---------- */
+.shots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 22px;
+}
+.shots .shot { margin-top: 0; }
 .shot {
     display: inline-flex;
     flex-direction: column;
