@@ -353,6 +353,22 @@ main { flex: 1; padding: 48px 0 40px; }
     color: var(--muted);
     font-size: 0.85rem;
 }
+/* full table: mileage | repair | place | sum — mute the 'place' col, keep 'repair' normal */
+.cost-table--full tbody td:nth-child(1) {
+    font-family: var(--font-display);
+    font-variant-numeric: tabular-nums;
+    color: var(--charcoal);
+    white-space: nowrap;
+}
+.cost-table--full tbody td:nth-child(2) {
+    color: var(--ink);
+    font-size: 0.95rem;
+}
+.cost-table--full tbody td:nth-child(3) {
+    color: var(--muted);
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
 .cost-table .num {
     text-align: right;
     font-variant-numeric: tabular-nums;
