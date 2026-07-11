@@ -4,51 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrokenCar — Range Rover Sport</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="site-header">
-        <div class="wrap">
-            <span class="brand">BrokenCar</span>
-            <span class="brand-sub">Огляд авто</span>
+        <div class="wrap site-header__inner">
+            <div class="logo">
+                <span class="logo__mark">BC</span>
+                <span class="logo__text">BrokenCar</span>
+            </div>
+            <nav class="nav">
+                <a href="#specs">Характеристики</a>
+                <a href="#" class="nav__cta">Записатись на огляд</a>
+            </nav>
         </div>
     </header>
 
+    <section class="hero">
+        <div class="hero__overlay"></div>
+        <div class="wrap hero__inner">
+            <span class="hero__eyebrow">На огляді · 2024</span>
+            <h1 class="hero__title">Range Rover&nbsp;Sport</h1>
+            <p class="hero__subtitle">494 · 3.0 Supercharged</p>
+            <div class="hero__meta">
+                <div class="hero__meta-item">
+                    <span class="hero__meta-value">96 000</span>
+                    <span class="hero__meta-label">км пробіг</span>
+                </div>
+                <div class="hero__meta-divider"></div>
+                <div class="hero__meta-item">
+                    <span class="hero__meta-value">3.0</span>
+                    <span class="hero__meta-label">Supercharged</span>
+                </div>
+                <div class="hero__meta-divider"></div>
+                <div class="hero__meta-item">
+                    <span class="hero__meta-value">494</span>
+                    <span class="hero__meta-label">модель</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <main class="wrap">
-        <section class="car-card">
-            <div class="car-card__media">
-                <span class="car-card__badge">На огляді</span>
+        <section class="specs" id="specs">
+            <div class="section-head">
+                <span class="section-head__kicker">Технічні дані</span>
+                <h2 class="section-head__title">Характеристики авто</h2>
             </div>
 
-            <div class="car-card__body">
-                <h1 class="car-title">Range Rover Sport</h1>
-                <p class="car-subtitle">494 · 3.0 Supercharged</p>
-
-                <dl class="specs">
-                    <div class="spec">
-                        <dt>Пробіг</dt>
-                        <dd>96 000 км</dd>
-                    </div>
-                    <div class="spec">
-                        <dt>VIN-код</dt>
-                        <dd class="mono">SALWR2VFXFA612341</dd>
-                    </div>
-                    <div class="spec">
-                        <dt>Двигун</dt>
-                        <dd>3.0 Supercharged</dd>
-                    </div>
-                    <div class="spec">
-                        <dt>Модель</dt>
-                        <dd>494</dd>
-                    </div>
-                </dl>
+            <div class="specs__grid">
+                <article class="spec-card">
+                    <span class="spec-card__label">Модель</span>
+                    <span class="spec-card__value">Range Rover Sport 494</span>
+                </article>
+                <article class="spec-card">
+                    <span class="spec-card__label">Двигун</span>
+                    <span class="spec-card__value">3.0 Supercharged</span>
+                </article>
+                <article class="spec-card">
+                    <span class="spec-card__label">Пробіг</span>
+                    <span class="spec-card__value">96 000 км</span>
+                </article>
+                <article class="spec-card spec-card--wide">
+                    <span class="spec-card__label">VIN-код</span>
+                    <span class="spec-card__value mono">SALWR2VFXFA612341</span>
+                </article>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <div class="wrap">
-            <span>BrokenCar · стартова інформація</span>
+        <div class="wrap site-footer__inner">
+            <span class="logo__text">BrokenCar</span>
+            <span class="site-footer__note">Стартова інформація · наповнюється</span>
         </div>
     </footer>
 </body>
