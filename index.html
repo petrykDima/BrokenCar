@@ -59,15 +59,31 @@
             <h2 class="section-head__title">Історія відновлення</h2>
         </div>
 
-        <ol class="timeline">
-            <li class="timeline__item timeline__item--empty">
-                <div class="timeline__dot"></div>
-                <div class="timeline__card">
-                    <p class="timeline__hint">Тут зʼявлятимуться етапи відновлення — дата, опис робіт, фото та вартість. Додамо перший запис на наступному кроці.</p>
-                </div>
-            </li>
-        </ol>
+        <article class="chapter">
+            <header class="chapter__head">
+                <span class="chapter__num">Розділ 01 · Перед покупкою</span>
+                <h3 class="chapter__title">Вибір СТО, отримання інформації для підбору</h3>
+            </header>
+
+            <div class="chapter__body">
+                <p>Довго вивчав цю модель — переглянув багато відео на YouTube, і машина повністю сподобалась.</p>
+                <p>Живу в Києві, тож зрадів, коли натрапив на медійне СТО <strong>V8 Service</strong>. Написав їм в Instagram, щоб уточнити кілька моментів перед пошуком.</p>
+                <p>Мені зателефонували — вийшов класний, відкритий діалог. Порадили <strong>не користуватись автопідбором</strong>, а самому поїздити містом, знайти варіанти й привозити авто до них на діагностику. Техніку вони передивляться повністю; кузовними роботами не займаються.</p>
+            </div>
+
+            <a class="shot" href="#shot-v8chat" aria-label="Відкрити скрін листування з V8 Service">
+                <img src="images/v8service-chat.png" alt="Листування з V8 Service в Instagram" loading="lazy">
+                <span class="shot__caption">Листування з V8 Service · Instagram · натисніть, щоб відкрити</span>
+            </a>
+        </article>
     </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="shot-v8chat">
+        <a class="lightbox__backdrop" href="#history" aria-label="Закрити"></a>
+        <a class="lightbox__close" href="#history" aria-label="Закрити">✕</a>
+        <img src="images/v8service-chat.png" alt="Листування з V8 Service в Instagram">
+    </div>
 
     <footer class="site-footer">
         <div class="wrap site-footer__inner">
