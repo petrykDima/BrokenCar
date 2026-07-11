@@ -347,6 +347,8 @@ main { flex: 1; padding: 48px 0 40px; }
 .note p:last-child { margin-bottom: 0; }
 .note strong { color: var(--racing-green); font-weight: 600; }
 .note em { color: var(--muted); font-style: italic; }
+.note--alert { border-left-color: var(--racing-red); }
+.note--alert .note__title { color: var(--racing-red); }
 
 /* ---------- Document (PDF) card ---------- */
 .doc {
