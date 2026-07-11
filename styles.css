@@ -228,6 +228,7 @@ main { flex: 1; padding: 48px 0 40px; }
     margin-top: 22px;
 }
 .shots .shot { margin-top: 0; }
+.shot--sm img { width: 130px; }
 .shot {
     display: inline-flex;
     flex-direction: column;
@@ -345,6 +346,7 @@ main { flex: 1; padding: 48px 0 40px; }
 }
 .note p:last-child { margin-bottom: 0; }
 .note strong { color: var(--racing-green); font-weight: 600; }
+.note em { color: var(--muted); font-style: italic; }
 
 /* ---------- Document (PDF) card ---------- */
 .doc {
