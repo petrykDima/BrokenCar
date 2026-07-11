@@ -258,6 +258,88 @@ main { flex: 1; padding: 48px 0 40px; }
     max-width: 220px;
 }
 
+/* ---------- Recommendations block ---------- */
+.reco {
+    margin-top: 22px;
+    background: var(--cream);
+    border: 1px solid var(--cream-deep);
+    border-left: 4px solid var(--racing-red);
+    border-radius: 10px;
+    padding: 18px 20px;
+}
+.reco__title {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--racing-red);
+    margin-bottom: 12px;
+}
+.reco__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.reco__list li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 0.95rem;
+    color: var(--ink);
+}
+.reco__list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--ochre);
+}
+
+/* ---------- Document (PDF) card ---------- */
+.doc {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 22px;
+    max-width: 420px;
+    text-decoration: none;
+    background: var(--cream-soft);
+    border: 1px solid var(--cream-deep);
+    border-radius: 10px;
+    padding: 14px 18px;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.doc:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(38, 34, 29, 0.14);
+}
+.doc__icon {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 8px;
+    background: var(--racing-red);
+    color: var(--cream);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+}
+.doc__meta { display: flex; flex-direction: column; gap: 3px; }
+.doc__title {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--charcoal);
+}
+.doc__sub { font-size: 0.8rem; color: var(--muted); }
+
 /* ---------- Listing reference card ---------- */
 .chapter + .chapter { margin-top: 20px; }
 .listing {
