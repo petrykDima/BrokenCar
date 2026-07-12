@@ -1280,14 +1280,17 @@
     </footer>
 
     <script>
-        // Toggle lightboxes via a class so the page scroll never jumps.
+        // Toggle lightboxes via inline display so the page scroll never jumps.
+        // Uses inline style (not a CSS class) to stay robust against stale CSS caches.
         // (:target remains as a no-JS fallback.)
         (function () {
             function closeAll() {
-                document.querySelectorAll('.lightbox.is-open').forEach(function (lb) {
-                    lb.classList.remove('is-open');
-                    var video = lb.querySelector('video');
-                    if (video) { video.pause(); }
+                document.querySelectorAll('.lightbox').forEach(function (lb) {
+                    if (lb.style.display === 'flex') {
+                        lb.style.display = '';
+                        var video = lb.querySelector('video');
+                        if (video) { video.pause(); }
+                    }
                 });
             }
             document.addEventListener('click', function (e) {
@@ -1300,7 +1303,7 @@
                 if (target && target.classList.contains('lightbox')) {
                     e.preventDefault();
                     closeAll();
-                    target.classList.add('is-open');
+                    target.style.display = 'flex';
                     return;
                 }
 
