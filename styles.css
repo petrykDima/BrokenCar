@@ -259,6 +259,25 @@ main { flex: 1; padding: 48px 0 40px; }
     max-width: 220px;
 }
 
+.clip {
+    display: block;
+    margin-top: 22px;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid var(--cream-deep);
+    box-shadow: 0 8px 20px rgba(38, 34, 29, 0.14);
+    background: #000;
+}
+.clip__label {
+    display: block;
+    font-size: 0.76rem;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+    margin-top: 8px;
+}
+
 /* ---------- Recommendations block ---------- */
 .reco {
     margin-top: 22px;
