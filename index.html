@@ -1278,5 +1278,42 @@
             <span class="site-footer__note">Незалежна оцінка · журнал наповнюється</span>
         </div>
     </footer>
+
+    <script>
+        // Toggle lightboxes via a class so the page scroll never jumps.
+        // (:target remains as a no-JS fallback.)
+        (function () {
+            function closeAll() {
+                document.querySelectorAll('.lightbox.is-open').forEach(function (lb) {
+                    lb.classList.remove('is-open');
+                    var video = lb.querySelector('video');
+                    if (video) { video.pause(); }
+                });
+            }
+            document.addEventListener('click', function (e) {
+                var link = e.target.closest('a[href^="#"]');
+                if (!link) return;
+                var id = link.getAttribute('href').slice(1);
+                var target = id ? document.getElementById(id) : null;
+
+                // Opening a lightbox
+                if (target && target.classList.contains('lightbox')) {
+                    e.preventDefault();
+                    closeAll();
+                    target.classList.add('is-open');
+                    return;
+                }
+
+                // Closing from within a lightbox
+                if (link.closest('.lightbox')) {
+                    e.preventDefault();
+                    closeAll();
+                }
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') { closeAll(); }
+            });
+        })();
+    </script>
 </body>
 </html>
